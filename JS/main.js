@@ -1,4 +1,6 @@
-
+/* Function that is executed in place and used to handle the YouTube
+   video popups and closures. In this case we use the jQuery as an object
+   and pass it in as a reference, dented by $. */
 $(function($) {
 
 	var $window = $(window),
