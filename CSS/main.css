@@ -1,0 +1,280 @@
+
+/* Basic Style */
+	/* background color for entire main window */
+	body {
+		background: whitesmoke;
+	}
+
+/* Type */
+/* used to keep elements within specified boundaries */
+* {
+	box-sizing: border-box;
+}
+
+	body, input, select, textarea {
+		color: black;
+		font-family: sans-serif;
+		font-size: 14pt;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: black;
+		font-weight: 400;
+		line-height: 1.5;
+		margin: 0 0 1em 0;
+	}
+
+/* Videos Layout */
+/* used to display video thumbnails side by side */
+	.thumbnails {
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+		.thumbnails .video {
+			margin: 1em 1em 2em 1em;
+			width: 40%;
+		}
+
+/* Video Box */
+/* Style for a single video box */
+	.video {
+		border-radius: 4px;
+		margin-bottom: 2em;
+		background: silver;
+		text-align: center;
+	}
+
+		.video .image img {
+			border-radius: 4px 4px 0 0;
+		}
+
+		.video .inner {
+			padding: 1.5em;
+			width: 100% !important;
+		}
+
+/* Image */
+/* Style for images in the YouTube thumbnails */
+	.image {
+		border-radius: 4px;
+		border: 0;
+		display: inline-block;
+		position: relative;
+	}
+
+		.image img {
+			border-radius: 4px;
+			display: block;
+		}
+
+		.image.left, .image.right {
+			max-width: 40%;
+		}
+
+			.image.left img, .image.right img {
+				width: 100%;
+			}
+
+		.image.left {
+			float: left;
+			padding: 0 1.5em 1em 0;
+			top: 0.25em;
+		}
+
+		.image.right {
+			float: right;
+			padding: 0 0 1em 1.5em;
+			top: 0.25em;
+		}
+
+		.image.fit {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+			.image.fit img {
+				width: 100%;
+			}
+
+		.image.main {
+			display: block;
+			margin: 0 0 3em 0;
+			width: 100%;
+		}
+
+			.image.main img {
+				width: 100%;
+			}
+	
+/* Button */
+	/* Style for the watch button under the YouTube thumbnails */
+	button,
+	.button {
+		/* default button properties */
+		appearance: none;
+		background-color: purple;
+		border-radius: 4px;
+		border: 0;
+		color: #ffffff !important;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 400;
+		height: 2.85em;
+		line-height: 2.95em;
+		padding: 0 1.5em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+		/* color of button when cursor is hovered over it */
+		button:hover,
+		.button:hover {
+			background-color: gray;
+		}
+		/* button color once it has been clicked */
+		button:active,
+		.button:active {
+			background-color: purple;
+		}
+
+		/* Used to fit the button across the width of the thumbnail */
+		button.fit,
+		.button.fit {
+			display: block;
+			margin: 0 0 1em 0;
+			width: 100%;
+		}
+
+/* Poptrox */
+
+		/* Style for YouTube popup videos */
+	.poptrox-popup {
+		box-sizing: content-box;
+		background: black;
+		border-radius: 4px;
+		padding: 2em;
+		overflow: hidden;
+	}
+
+		.poptrox-popup .closer {
+			transition: opacity 0.2s ease-in-out;
+			text-decoration: none;
+			position: absolute;
+			top: .5em;
+			right: .5em;
+			z-index: 11000;
+			white-space: nowrap;
+			text-indent: 2em;
+			overflow: hidden;
+			width: 2em;
+			height: 2em;
+			display: block;
+		}
+
+			.poptrox-popup .closer:before {
+				content: "\00d7";
+				font-style: normal;
+				font-weight: bold;
+				text-transform: none !important;
+				display: block;
+				position: relative;
+				text-indent: 0;
+				border-radius: 100%;
+				box-shadow: inset 0 0 0 1px black;
+				color: red !important;
+				width: 2em;
+				height: 2em;
+				line-height: 2em;
+			}
+
+/* Banner */
+
+	#banner {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		min-height: 100vh;
+		background-image: url("../IMAGES/SkylineR34Track.jpg");
+		background-size: cover;
+	}
+
+		#banner .inner {
+			text-align: center;
+		}
+		/* Style for main title of webpage */
+		#banner h1 {
+			color: red;
+			font-size: 6em;
+			font-weight: 500;
+			font-family: 'Times New Roman';
+			margin: 0;
+		}
+		/* Style for paragraph font in banner area */
+		#banner p {
+			color: red;
+			font-size: 1.5em;
+			font-weight: 500;
+		}
+		/* Style for drop down link font */
+		#banner a {
+			color: red;
+			text-decoration: none;
+			border-bottom: 1px dotted;
+		}
+			/* Stlye for font when hovering over drop down link */
+			#banner a:hover {
+				color: #FFF;
+				border: none;
+			}
+			/* Style for background when hovering over drop own link */
+			#banner .more:hover {
+				background-color: purple;
+			}
+
+/* Footer */
+
+	#footer {
+		padding: 4em 0 2em 0;
+		background-color: whitesmoke;
+		text-align: center;
+	}
+	#footer .inner {
+		width: 50%;
+		margin: 0 auto;
+	}
+/* Contact form */
+/* Style for text areas of the contact form */
+input[type=text], select, textarea {
+	width: 50%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+  }
+  /* Style for submit button */
+  input[type=submit] {
+	background-color: teal;
+	color: white;
+	padding: 12px 20px;
+	cursor: pointer;
+  }
+  /* Style when hovering over submit button */
+  input[type=submit]:hover {
+	background-color: seagreen;
+  }
+  
+  /* Style the contact form background section */
+  .container {
+	border-radius: 5px;
+	background-color: whitesmoke;
+	padding: 10px;
+  }
+	
+	
