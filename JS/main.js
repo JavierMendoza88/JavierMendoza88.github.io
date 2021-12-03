@@ -6,13 +6,13 @@ $(function($) {
 	var $window = $(window),
 		$body = $('body');
 
-	// Poptrox.
+	// Poptrox. Called when the web page is loaded.
 		$window.on('load', function() {
+			// This variable will be used to handle the thumbnails element from the HTML
+			var $thumbnails = $('.thumbnails');
 
-			var $thumbs = $('.thumbnails');
-
-			if ($thumbs.length > 0)
-				$thumbs.poptrox({
+			if ($thumbnails.length > 0)
+				$thumbnails.poptrox({
 					// Called when the YouTube popup closes
 					onPopupClose: function() { $body.removeClass('is-covered'); },
 					// Called when the YouTube popup opens
@@ -24,4 +24,4 @@ $(function($) {
 					usePopupDefaultStyling: false,
 				});
 		});
-})(jQuery);
+})(jQuery); // return jQuery object
