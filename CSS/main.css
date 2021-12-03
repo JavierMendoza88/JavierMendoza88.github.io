@@ -236,7 +236,13 @@
 			#banner .more:hover {
 				background-color: purple;
 			}
-
+			/* Used to place resources links on separate lines */
+			div a:after {
+				content: "";
+				display: block;
+				height: 0;
+				width: 1px;
+			  }
 /* Footer */
 
 	#footer {
